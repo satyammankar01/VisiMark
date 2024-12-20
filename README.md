@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# VisiMark ✋
 
-## Available Scripts
+A faceface recognition based attendance monitoting system.
 
-In the project directory, you can run:
+# <div id="run">✅ Running the Application</div>
 
-### `yarn start`
+## Server
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Make sure the 10 env variables have been assigned in ".env" file.
+2. Install the "nodemon" which can restart the server script automatically if changes are detected.
+3. Open CMD, execute command "npm i -g nodemon" to install nodemon globally.
+4. Take a look at "server/package.json".
+5. Open CMD under directory "server", type "npm run dev".
+6. The server is running on http://localhost:4000.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Client
 
-### `yarn test`
+1. The client script is built using ReactJS, through CRA command.
+2. Open CMD under directory "client", type "npm start".
+3. The client is running on http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# <div id="user">✅ User Guidelines</div>
 
-### `yarn build`
+## Professor
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Register an account.
+2. Create a course.
+3. Give the course unique ID to your students.
+4. Students need to send the request to enrol, approve the enrolment.
+5. You do not need upload student's face photo, which will be done by students.
+6. After all student enrolled, select a course and take the attendance.
+7. You can see how many face photo of all the enrolled students have uploaded.
+8. Ensure that the students upload their face photo, otherwise there is no facial data of that student for reference.
+9. Only those enrol in the particular course will be counted into dataset for facial classification.
+10. Inside attendance taking form, select the time, date and camera.
+11. Wait for all the models being loaded.
+12. Set the approriate threshold distance as you wish.
+13. Submit the attendance form if finished.
+14. Visualize the attendance data in "Attendance History", or you can enter a particular course and click "View Attendance History".
+15. You can "Warn" or "Kick" the student out of a course.
+16. The face photo of the student who is kicked out will not be counted next time taking the attendance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Student
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Register an account.
+2. Enrol a course.
+3. Wait for approval from the lecturer.
+4. Upload your face photo in "Face Gallery", best to have at least 2 face photo.
+5. Wait for all models being loaded.
+6. The system will perform face detection, ensuring only a single face exist and rejecting photo with empty face or multiple faces.
+7. The photo will be uploaded to the image storage.
+8. When your lecturer take the attendance of a particular course, all your uploaded facial data will be counted into the dataset for facial comparison.
+9. Visualize the attendance data in "Attendance History", or you can enter a particular course and click "View Attendance History".
